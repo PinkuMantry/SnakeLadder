@@ -1,0 +1,474 @@
+<html xmlns:th="https://www.thymeleaf.org/">
+<head>
+<title>snake ladder</title>
+	<style>
+        table{
+            align-items:center;
+        }
+        td{
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+        img{
+            height:30; 
+            position: relative; 
+            opacity: 0;
+        }
+        div{
+         width: 50%;
+         float: left;
+        }
+	</style>
+    </head>
+    <body style="background-color: gray;">
+    
+<h3 style="color: cyan; text-align:center;">SNAKE  LADDER</h3>
+<div style="width: 25%;padding-top:50;text-align:center">
+<marquee><h2 style="color:crimson;background-color:chartreuse">[[${result}]]</h2></marquee>
+<a href="/capillary/start" style="text-decoration:none;"><button style="background-color: darkorange; width:150px;height:60px; border-radius: 20px;"><b style="font-size:15;"><i>>>>Restart</i></b></button></a>
+</div>
+       <div>
+        <table style="font-size:45; text-align:center;margin-top:0;" align="center" border="1">
+            <tr>
+                <td background="/images/100.jpg">
+                    <img id="g100" src="/images/green.png">
+                    <img id="r100" src="/images/red.png">
+                </td>
+                <td background="/images/99.jpg"> 
+                    <img id="g99" src="/images/green.png">
+                    <img id="r99" src="/images/red.png">
+                </td>
+                <td background="/images/98.jpg">
+                    <img id="g98" src="/images/green.png">
+                    <img id="r98" src="/images/red.png">
+                </td>
+                <td background="/images/97.jpg">
+                    <img id="g97" src="/images/green.png">
+                    <img id="r97" src="/images/red.png">
+                </td>
+                <td background="/images/96.jpg">
+                    <img id="g96" src="/images/green.png">
+                    <img id="r96" src="/images/red.png">
+                </td>
+                <td background="/images/95.jpg">
+                    <img id="g95" src="/images/green.png">
+                    <img id="r95" src="/images/red.png">
+                </td>
+                <td id="94" background="/images/94.jpg">
+                    <img id="g94" src="/images/green.png">
+                    <img id="r94" src="/images/red.png">
+                </td>
+                <td id="93" background="/images/93.jpg">
+                    <img id="g93" src="/images/green.png">
+                    <img id="r93" src="/images/red.png">
+                </td>
+                <td id="92" background="/images/92.jpg">
+                    <img id="g92" src="/images/green.png">
+                    <img id="r92" src="/images/red.png">
+                </td>
+                <td id="91" background="/images/91.jpg">
+                    <img id="g91" src="/images/green.png">
+                    <img id="r91" src="/images/red.png">
+                </td>
+            </tr>
+            <tr>
+                <td id="81" background="/images/81.jpg">
+                <img id="g81" src="/images/green.png">
+                <img id="r81" src="/images/red.png">    
+                </td>
+                <td id="82" background="/images/82.jpg">
+                <img id="g82" src="/images/green.png">
+                <img id="r82" src="/images/red.png">
+                </td>
+                <td id="83" background="/images/83.jpg">
+                <img id="g83" src="/images/green.png">
+                <img id="r83" src="/images/red.png">  
+                </td>
+                <td id="84" background="/images/84.jpg">
+                <img id="g84" src="/images/green.png">
+                <img id="r984" src="/images/red.png">    
+                </td>
+                <td id="85" background="/images/85.jpg">
+                <img id="g85" src="/images/green.png">
+                <img id="r85" src="/images/red.png"> 
+                </td>
+                <td id="86" background="/images/86.jpg">
+                <img id="g86" src="/images/green.png">
+                <img id="r86" src="/images/red.png">  
+                </td>
+                <td id="87" background="/images/87.jpg">
+                <img id="g87" src="/images/green.png">
+                <img id="r87" src="/images/red.png">  
+                </td>
+                <td id="88" background="/images/88.jpg">
+                <img id="g88" src="/images/green.png">
+                <img id="r88" src="/images/red.png"> 
+                </td>
+                <td id="89" background="/images/89.jpg">
+                <img id="g89" src="/images/green.png">
+                <img id="r89" src="/images/red.png">   
+                </td>
+                <td id="90" background="/images/90.jpg">
+                <img id="g90" src="/images/green.png">
+                <img id="r90" src="/images/red.png">   
+                </td>
+            </tr>
+            <tr>
+                <td id="80" background="/images/80.jpg">
+                <img id="g80" src="/images/green.png">
+                <img id="r80" src="/images/red.png">     
+                </td>
+                <td id="79" background="/images/79.jpg">
+                <img id="g79" src="/images/green.png">
+                <img id="r79" src="/images/red.png">  
+                </td>
+                <td id="78" background="/images/78.jpg">
+                <img id="g78" src="/images/green.png">
+                <img id="r78" src="/images/red.png">   
+                </td>
+                <td id="77" background="/images/77.jpg">
+                <img id="g77" src="/images/green.png">
+                <img id="r77" src="/images/red.png"> 
+                </td>
+                <td id="76" background="/images/76.jpg">
+                <img id="g76" src="/images/green.png">
+                <img id="r76" src="/images/red.png"> 
+                </td>
+                <td id="75" background="/images/75.jpg">
+                <img id="g75" src="/images/green.png">
+                <img id="r75" src="/images/red.png"> 
+                </td>
+                <td id="74" background="/images/74.jpg">
+                <img id="g74" src="/images/green.png">
+                <img id="r74" src="/images/red.png"> 
+                </td>
+                <td id="73" background="/images/73.jpg">
+                <img id="g73" src="/images/green.png">
+                <img id="r73" src="/images/red.png"> 
+                </td>
+                <td id="72" background="/images/72.jpg">
+                <img id="g72" src="/images/green.png">
+                <img id="r72" src="/images/red.png"> 
+                </td>
+                <td id="71" background="/images/71.jpg">
+                <img id="g71" src="/images/green.png">
+                <img id="r71" src="/images/red.png"> 
+                </td>
+            </tr>
+            <tr>
+                <td id="61" background="/images/61.jpg">
+                <img id="g61" src="/images/green.png">
+                <img id="r61" src="/images/red.png"> 
+                </td>
+                <td id="62" background="/images/62.jpg">
+                <img id="g62" src="/images/green.png">
+                <img id="r62" src="/images/red.png">   
+                </td>
+                <td id="63" background="/images/63.jpg">
+                <img id="g63" src="/images/green.png">
+                <img id="r63" src="/images/red.png">  
+                </td>
+                <td id="64" background="/images/64.jpg">
+                <img id="g64" src="/images/green.png">
+                <img id="r64" src="/images/red.png">  
+                </td>
+                <td id="65" background="/images/65.jpg">
+                <img id="g65" src="/images/green.png">
+                <img id="r65" src="/images/red.png"> 
+                </td>
+                <td id="66" background="/images/66.jpg">
+                <img id="g66" src="/images/green.png">
+                <img id="r66" src="/images/red.png"> 
+                </td>
+                <td id="67" background="/images/67.jpg">
+                <img id="g67" src="/images/green.png">
+                <img id="r67" src="/images/red.png">  
+                </td>
+                <td id="68" background="/images/68.jpg">
+                <img id="g68" src="/images/green.png">
+                <img id="r68" src="/images/red.png">   
+                </td>
+                <td id="69" background="/images/69.jpg">
+                <img id="g69" src="/images/green.png">
+                <img id="r69" src="/images/red.png">    
+                </td>
+                <td id="70" background="/images/70.jpg">
+				<img id="g70" src="/images/green.png">
+                <img id="r70" src="/images/red.png"> 
+                </td>
+            </tr>
+            <tr>
+                <td id="60" background="/images/60.jpg">
+                <img id="g60" src="/images/green.png">
+                <img id="r60" src="/images/red.png"> 
+                </td>
+                <td id="59" background="/images/59.jpg">
+                <img id="g59" src="/images/green.png">
+                <img id="r59" src="/images/red.png">    
+                </td>
+                <td id="58" background="/images/58.jpg">
+                <img id="g58" src="/images/green.png">
+                <img id="r58" src="/images/red.png">   
+                </td>
+                <td id="57" background="/images/57.jpg">
+                <img id="g57" src="/images/green.png">
+                <img id="r57" src="/images/red.png">   
+                </td>
+                <td id="56" background="/images/56.jpg">
+                <img id="g56" src="/images/green.png">
+                <img id="r56" src="/images/red.png">   
+                </td>
+                <td id="55" background="/images/55.jpg">
+                <img id="g55" src="/images/green.png">
+                <img id="r55" src="/images/red.png">    
+                </td>
+                <td id="54" background="/images/54.jpg">
+                <img id="g54" src="/images/green.png">
+                <img id="r54" src="/images/red.png">    
+                </td>
+                <td id="53" background="/images/53.jpg">
+                <img id="g53" src="/images/green.png">
+                <img id="r53" src="/images/red.png">    
+                </td>
+                <td id="52" background="/images/52.jpg">
+                <img id="g52" src="/images/green.png">
+                <img id="r52" src="/images/red.png">  
+                </td>
+                <td id="51" background="/images/51.jpg">
+                <img id="g51" src="/images/green.png">
+                <img id="r51" src="/images/red.png">  
+                </td>
+            </tr>
+            <tr>
+                <td id="41" background="/images/41.jpg">
+                <img id="g41" src="/images/green.png">
+                <img id="r41" src="/images/red.png"> 
+                </td>
+                <td id="42" background="/images/42.jpg">
+                <img id="g42" src="/images/green.png">
+                <img id="r42" src="/images/red.png">    
+                </td>
+                <td id="43" background="/images/43.jpg">
+                <img id="g43" src="/images/green.png">
+                <img id="r43" src="/images/red.png">    
+                </td>
+                <td id="44" background="/images/44.jpg">
+                <img id="g44" src="/images/green.png">
+                <img id="r44" src="/images/red.png">  
+                </td>
+                <td id="45" background="/images/45.jpg">
+                <img id="g45" src="/images/green.png">
+                <img id="r45" src="/images/red.png">   
+                </td>
+                <td id="46" background="/images/46.jpg">
+                <img id="g46" src="/images/green.png">
+                <img id="r46" src="/images/red.png">  
+                </td>
+                <td id="47" background="/images/47.jpg">
+                <img id="g47" src="/images/green.png">
+                <img id="r47" src="/images/red.png">   
+                </td>
+                <td id="48" background="/images/48.jpg">
+                <img id="g48" src="/images/green.png">
+                <img id="r48" src="/images/red.png">    
+                </td>
+                <td id="49" background="/images/49.jpg">
+                <img id="g49" src="/images/green.png">
+                <img id="r49" src="/images/red.png">   
+                </td>
+                <td id="50" background="/images/50.jpg">
+                <img id="g50" src="/images/green.png">
+                <img id="r50" src="/images/red.png">    
+                </td>
+            </tr>
+            <tr>
+                <td id="40" background="/images/40.jpg">
+                <img id="g40" src="/images/green.png">
+                <img id="r40" src="/images/red.png"> 
+                </td>
+                <td id="39" background="/images/39.jpg">
+                <img id="g39" src="/images/green.png">
+                <img id="r39" src="/images/red.png">    
+                </td>
+                <td id="38" background="/images/38.jpg">
+                <img id="g38" src="/images/green.png">
+                <img id="r38" src="/images/red.png">    
+                </td>
+                <td id="37" background="/images/37.jpg">
+                <img id="g37" src="/images/green.png">
+                <img id="r37" src="/images/red.png">   
+                </td>
+                <td id="36" background="/images/36.jpg">
+                <img id="g36" src="/images/green.png">
+                <img id="r36" src="/images/red.png">   
+                </td>
+                <td id="35" background="/images/35.jpg">
+                <img id="g35" src="/images/green.png">
+                <img id="r35" src="/images/red.png">   
+                </td>
+                <td id="34" background="/images/34.jpg">
+                <img id="g34" src="/images/green.png">
+                <img id="r34" src="/images/red.png">    
+                </td>
+                <td id="33" background="/images/33.jpg">
+                <img id="g33" src="/images/green.png">
+                <img id="r33" src="/images/red.png">    
+                </td>
+                <td id="32" background="/images/32.jpg">
+                <img id="g32" src="/images/green.png">
+                <img id="r32" src="/images/red.png">   
+                </td>
+                <td id="31" background="/images/31.jpg">
+                <img id="g31" src="/images/green.png">
+                <img id="r31" src="/images/red.png"> 
+                </td>
+            </tr>
+                <td id="21" background="/images/21.jpg">
+                <img id="g21" src="/images/green.png">
+                <img id="r21" src="/images/red.png"> 
+                </td>
+                <td id="22" background="/images/22.jpg">
+                <img id="g22" src="/images/green.png">
+                <img id="r22" src="/images/red.png">  
+                </td>
+                <td id="23" background="/images/23.jpg">
+                <img id="g23" src="/images/green.png">
+                <img id="r23" src="/images/red.png">   
+                </td>
+                <td id="24" background="/images/24.jpg">
+                <img id="g24" src="/images/green.png">
+                <img id="r24" src="/images/red.png">  
+                </td>
+                <td id="25" background="/images/25.jpg">
+                <img id="g25" src="/images/green.png">
+                <img id="r25" src="/images/red.png">   
+                </td>
+                <td id="26" background="/images/26.jpg">
+                <img id="g26" src="/images/green.png">
+                <img id="r26" src="/images/red.png"> 
+                </td>
+                <td id="27" background="/images/27.jpg">
+                <img id="g27" src="/images/green.png">
+                <img id="r27" src="/images/red.png"> 
+                </td>
+                <td id="28" background="/images/28.jpg">
+                <img id="g28" src="/images/green.png">
+                <img id="r28" src="/images/red.png"> 
+                </td>
+                <td id="29" background="/images/29.jpg">
+                <img id="g29" src="/images/green.png">
+                <img id="r29" src="/images/red.png"> 
+                </td>
+                <td id="30" background="/images/30.jpg">
+                <img id="g30" src="/images/green.png">
+                <img id="r30" src="/images/red.png"> 
+                </td>
+            </tr>
+            <tr>
+                <td id="20" background="/images/20.jpg">
+                <img id="g20" src="/images/green.png">
+                <img id="r20" src="/images/red.png"> 
+                </td>
+                <td id="19" background="/images/19.jpg">
+                <img id="g19" src="/images/green.png">
+                <img id="r19" src="/images/red.png"> 
+                </td>
+                <td id="18" background="/images/18.jpg">
+                <img id="g18" src="/images/green.png">
+                <img id="r18" src="/images/red.png"> 
+                </td>
+                <td id="17" background="/images/17.jpg">
+                <img id="g17" src="/images/green.png">
+                <img id="r17" src="/images/red.png"> 
+                </td>
+                <td id="16" background="/images/16.jpg">
+                <img id="g16" src="/images/green.png">
+                <img id="r16" src="/images/red.png"> 
+                </td>
+                <td id="15" background="/images/15.jpg">
+                <img id="g15" src="/images/green.png">
+                <img id="r15" src="/images/red.png"> 
+                </td>
+                <td id="14" background="/images/14.jpg">
+                <img id="g14" src="/images/green.png">
+                <img id="r14" src="/images/red.png"> 
+                </td>
+                <td background="/images/13.jpg">
+                <img id="g13" src="/images/green.png">
+                <img id="r13" src="/images/red.png"> 
+                </td>
+                <td background="/images/12.jpg">
+                <img id="g12" src="/images/green.png">
+                <img id="r12" src="/images/red.png"> 
+                </td>
+                <td id="11" background="/images/11.jpg">
+                <img id="g11" src="/images/green.png">
+                <img id="r11" src="/images/red.png"> 
+                </td>
+            </tr>
+            <tr>
+                <td id="1" background="/images/1.jpg">
+                <img id="g1" src="/images/green.png">
+                <img id="r1" src="/images/red.png"> 
+                </td>
+                <td id="2" background="/images/2.jpg">
+                <img id="g2" src="/images/green.png">
+                <img id="r2" src="/images/red.png"> 
+                </td>
+                <td id="3" background="/images/3.jpg">
+                <img id="g3" src="/images/green.png">
+                <img id="r3" src="/images/red.png"> 
+                </td>
+                <td background="/images/4.jpg">
+                <img id="g4" src="/images/green.png">
+                <img id="r4" src="/images/red.png"> 
+                </td>
+                <td background="/images/5.jpg">
+                <img id="g5" src="/images/green.png">
+                <img id="r5" src="/images/red.png"> 
+                </td>
+                <td background="/images/6.jpg">
+                <img id="g6" src="/images/green.png">
+                <img id="r6" src="/images/red.png">  
+                </td>
+                <td background="/images/7.jpg">
+                <img id="g7" src="/images/green.png">
+                <img id="r7" src="/images/red.png"> 
+                </td>
+                <td background="/images/8.jpg">
+                <img id="g8" src="/images/green.png">
+                <img id="r8" src="/images/red.png"> 
+                </td>
+                <td background="/images/9.jpg">
+                <img id="g9" src="/images/green.png">
+                <img id="r9" src="/images/red.png"> 
+                </td>
+                <td background="/images/10.jpg">
+                <img id="g10" src="/images/green.png">
+                <img id="r10" src="/images/red.png"> 
+                </td>
+            </tr>
+        </table>
+       </div>
+       <div style="width: 25%;">
+        <center> 
+        <img id="dice6" src="/images/dice6.jpg"><br>
+        <img id="dice5" src="/images/dice5.jpg"><br>
+        <img id="dice4" src="/images/dice4.jpg"><br>
+        <img id="dice3" src="/images/dice3.jpg"><br>
+        <img id="dice2" src="/images/dice2.jpg"><br>
+        <img id="dice1" src="/images/dice1.jpg"><br>
+        <a id="dc" href="/capillary/dice_count" style="text-decoration:solid;"><button style="background-color: aqua; width:100px;height:40px; border-radius: 30px;"><b>Play</b></button></a>
+   		</center>
+       </div>
+        <script th:inline="javascript">
+            var message = /*[[${list}]]*/ 'default';
+            var x="r"+message[0];
+            var y="g"+message[1];
+            var z="dice"+message[2];
+            	document.getElementById(z).style.opacity= 1;
+                document.getElementById(x).style.opacity= 1; 
+                document.getElementById(y).style.opacity= 1;
+        </script>
+    </body>
+</html>
